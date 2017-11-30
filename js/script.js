@@ -72,7 +72,7 @@ text.innerHTML = arrayOfQuestions[0].question;
 yes.addEventListener("click", function (e) {
     e.preventDefault();
 
-    text.classList.remove("animated","bounceInDown");
+    text.classList.remove("animated","bounceInDown", "bounceInLeft");
 
 	var that = this
 	var filter = arrayOfQuestions.filter( function (item) {
@@ -104,7 +104,7 @@ yes.addEventListener("click", function (e) {
 no.addEventListener("click", function (e) {
     e.preventDefault();
 
-    text.classList.remove("animated","bounceInDown");
+    text.classList.remove("animated","bounceInDown", "bounceInLeft");
 
 	var that = this;
 	var filter = arrayOfQuestions.filter(function (item) { 
@@ -134,9 +134,9 @@ no.addEventListener("click", function (e) {
 },false);
 
 
-text.onmouseover = function () {
-    text.className = "animated shake text";
-};
+// text.onmouseover = function () {
+//     text.className = "animated shake text";
+// };
 
 
 
