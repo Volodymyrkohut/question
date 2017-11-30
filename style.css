@@ -1,0 +1,10 @@
+
+.question {
+	text-align:center;
+	font-size:35px;
+}
+
+.yes:hover, .no:hover {
+	cursor: pointer;
+	color: gray;
+} 
