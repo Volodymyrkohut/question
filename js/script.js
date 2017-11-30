@@ -62,25 +62,28 @@ var arrayOfQuestions = [
 		nextYes: null,
 		nextNo: null
 	}
-]
+];
 
 
 //defoult text!
 text.innerHTML = arrayOfQuestions[0].question;
 
-//When click to yes booton 
+//When click to yes button
 yes.addEventListener("click", function (e) {
-	
+    e.preventDefault();
+
+    text.classList.remove("animated","bounceInDown");
+
 	var that = this
-	var filter = arrayOfQuestions.filter(function (item) { 
+	var filter = arrayOfQuestions.filter( function (item) {
 		return item.question == that.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[0].textContent
-	})[0]
-	var some = arrayOfQuestions.filter(function (item) {
+	})[0];
+	var some = arrayOfQuestions.filter( function (item) {
 		return item.key == filter.nextYes
-	})[0]
-	if(some && some.props && some.props2) {
-		yes.innerHTML = some.props
-		no.innerHTML = some.props2
+	})[0];
+	if( some && some.props && some.props2 ) {
+		yes.innerHTML = some.props;
+		no.innerHTML = some.props2;
 	} else {
 		yes.innerHTML = "yes"
 		no.innerHTML = "no"
@@ -91,30 +94,57 @@ yes.addEventListener("click", function (e) {
 	} else {
 		question.innerHTML = "question is end!"
 	}
-})
+
+	setTimeout(function (){
+        text.classList.add("animated","bounceInDown","text");
+	},0);
+},false);
 
 //when click to no button
 no.addEventListener("click", function (e) {
+    e.preventDefault();
 
-	var that = this
+    text.classList.remove("animated","bounceInDown");
+
+	var that = this;
 	var filter = arrayOfQuestions.filter(function (item) { 
 		return item.question == that.previousSibling.previousSibling.childNodes[0].textContent
-	})[0]
+	})[0];
 	var some = arrayOfQuestions.filter(function (item) {
 		return item.key == filter.nextNo
-	})[0]
+	})[0];
 	if(some && some.props && some.props2) {
-		yes.innerHTML = some.props
+		yes.innerHTML = some.props;
 		no.innerHTML = some.props2
 	} else {
-		yes.innerHTML = "yes"
-		no.innerHTML = "no"
+		yes.innerHTML = "yes";
+		no.innerHTML = "no";
 	}
 
 	if(some) {
 		text.innerHTML = some.question;
 	} else {
-		question.innerHTML = "question is end!"
+		question.innerHTML = "question is end!";
 	}
-	
-})
+
+    setTimeout(function(){
+        text.classList.add("animated","bounceInDown","text");
+    },0);
+
+},false);
+
+
+text.onmouseover = function () {
+    text.className = "animated shake text";
+};
+
+
+
+
+
+
+
+
+
+
+

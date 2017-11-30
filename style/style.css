@@ -1,0 +1,32 @@
+body {
+	min-height: 100%;
+	width: 100%;
+	background: url("../images/11.jpg");
+	background-size: cover;
+	background-position:center;
+}
+.question {
+	margin-top:10%;
+	text-align:center;
+	font-size:35px;
+}
+
+.text {
+	padding-top:50px;
+	border:2px solid aliceblue;
+	border-radius: 5px;
+	margin: 0 auto;
+	display: block;
+	color: aliceblue;
+	width: 300px;
+	height: 120px;
+}
+
+.no,.yes {
+	color:aliceblue;
+}
+
+.yes:hover, .no:hover {
+	cursor: pointer;
+	color: powderblue;
+} 
