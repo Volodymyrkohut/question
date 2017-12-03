@@ -1,4 +1,11 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
+	overflow: hidden;
 	min-height: 100%;
 	width: 100%;
 	background: url("../images/11.jpg");
@@ -12,14 +19,15 @@ body {
 }
 
 .text {
-	padding-top:50px;
+
+	padding:50px 20px;
 	border:2px solid aliceblue;
 	border-radius: 5px;
 	margin: 10px auto;
 	display: block;
 	color: aliceblue;
 	width: 300px;
-	height: 120px;
+	height: 180px;
 }
 
 .no,.yes {

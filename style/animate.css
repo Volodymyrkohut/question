@@ -490,12 +490,16 @@
 }
 
 @keyframes bounceTop {
-  from, 50%, 55%, to {
+  from, 20%,50%, 55%, to {
     animation-timing-function: linear;
   }
 
   from {
     transform: translate3d(0, 0, 0);
+  }
+
+  20%{
+    transform: rotate3d(1,0,0,60deg);
   }
 
   50% {
