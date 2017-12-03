@@ -13,6 +13,11 @@
   animation-fill-mode: both;
 }
 
+.animated-long {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
 .animated.infinite {
   animation-iteration-count: infinite;
 }
@@ -484,14 +489,66 @@
   animation-name: bounceOut;
 }
 
+@keyframes bounceTop {
+  from, 50%, 55%, to {
+    animation-timing-function: linear;
+  }
+
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -400px, 0);
+  }
+
+  55% {
+    opacity: 0;
+    transform: translate3d(0, 400px, 0);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceTop {
+  animation-name: bounceTop;
+}
+
+@keyframes forButton {
+  from, 95%, to {
+    animation-timing-function: linear;
+  }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  95% {
+    transform: translate3d(300px, 0, 0);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.forButton {
+  animation-name: forButton;
+}
+
+
+
 @keyframes bounceOutDown {
   20% {
     transform: translate3d(0, 10px, 0);
-  }
-
-  40%, 45% {
-    opacity: 1;
-    transform: translate3d(0, -20px, 0);
   }
 
   to {

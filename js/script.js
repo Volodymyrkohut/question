@@ -72,7 +72,9 @@ text.innerHTML = arrayOfQuestions[0].question;
 yes.addEventListener("click", function (e) {
     e.preventDefault();
 
-    text.classList.remove("animated","bounceInDown", "bounceInLeft");
+    text.classList.remove("animated-long","bounceTop", "bounceInLeft");
+	no.classList.remove("animated-long", "bounceInRight", "forButton");
+    yes.classList.remove("animated-long", "bounceInRight", "forButton");
 
 	var that = this
 	var filter = arrayOfQuestions.filter( function (item) {
@@ -96,7 +98,9 @@ yes.addEventListener("click", function (e) {
 	}
 
 	setTimeout(function (){
-        text.classList.add("animated","bounceInDown","text");
+        text.classList.add("animated-long","bounceTop","text");
+        no.classList.add("animated-long", "forButton", "no");
+        yes.classList.add("animated-long", "forButton", "yes");
 	},0);
 },false);
 
@@ -104,7 +108,9 @@ yes.addEventListener("click", function (e) {
 no.addEventListener("click", function (e) {
     e.preventDefault();
 
-    text.classList.remove("animated","bounceInDown", "bounceInLeft");
+    text.classList.remove("animated-long","bounceTop", "bounceInLeft");
+    no.classList.remove("animated-long", "bounceInRight", "forButton");
+    yes.classList.remove("animated-long", "bounceInRight", "forButton");
 
 	var that = this;
 	var filter = arrayOfQuestions.filter(function (item) { 
@@ -128,7 +134,9 @@ no.addEventListener("click", function (e) {
 	}
 
     setTimeout(function(){
-        text.classList.add("animated","bounceInDown","text");
+        text.classList.add("animated-long","bounceTop","text");
+        no.classList.add("animated-long", "forButton", "no");
+        yes.classList.add("animated-long", "forButton", "yes");
     },0);
 
 },false);
